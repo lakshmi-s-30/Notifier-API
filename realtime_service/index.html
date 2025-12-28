@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Live Notifications</h2>
+    <div id="log"></div>
+    <script>
+        const socket = new WebSocket('ws://localhost:8080');
+        socket.onopen = () => socket.send('user_123'); // Register as user_123
+        socket.onmessage = (event) => {
+            const el = document.createElement('p');
+            el.innerText = `New notification: ${event.data}`;
+            document.getElementById('log').appendChild(el);
+        };
+    </script>
+</body>
+
+</html>

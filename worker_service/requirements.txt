@@ -1,0 +1,3 @@
+pika
+sqlalchemy
+psycopg2-binary # Synchronous driver for the worker

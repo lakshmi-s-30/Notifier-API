@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+asyncpg
+sqlalchemy[asyncio]
+pydantic
+pika  # For RabbitMQ publishing
